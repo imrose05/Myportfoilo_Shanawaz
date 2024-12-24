@@ -1,0 +1,121 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   background-color: #080808;
+   color: #fff;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   height: 100vh;
+   
+}
+#logo {
+   font-size: 2rem;
+   font-weight: bold;
+   color: #fff;
+   margin: 30px 1%; 
+   align-self: flex-start ; 
+}
+
+#content h1 {
+   font-size: 4rem;
+   font-weight: bold;
+   line-height: 1.2;
+   margin: 20px 0;
+}
+
+
+#content {
+   flex: auto;
+   margin-left: 60px;
+}
+
+
+.container{
+   display: flex;
+
+   padding: 10px 10%;
+}
+nav{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+nav {
+   position: absolute; 
+   top: 15px; 
+   right: 10px; 
+   display: flex;
+   align-items: center;
+}
+
+nav ul {
+   display: flex;
+   list-style: none;
+}
+
+nav ul li {
+   margin: 0 28px;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+}
+
+
+
+
+#content p {
+   font-size: 1.2rem;
+   margin-top: 10px;
+}
+
+#profile-pic {
+   flex:-2;
+   height: 100%;
+   margin-right: 60px;
+   display: flex;
+   justify-content: right;
+   align-items: center;
+}
+
+#profile-pic img {
+   width: 100%;
+   max-width: 450px;
+   border-radius: 10px;
+   object-fit: cover;
+}
+#/* About Section */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', sans-serif;
+   background-color: #080808;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   height: 100vh;
+   
+#About {
+   margin-top: 50px; /* Adds spacing from previous sections */
+   display: flex;
+   flex-direction: row center; /* Stack items vertically */
+   align-items: center; /* Center-align the content horizontally */
+   text-align: center; /* Align text to the center */
+   padding: 20px; /* Adds padding for spacing */
+}
+
+.about-col-2 h1 {
+   font-size: 2rem; /* Size for the "About Me" heading */
+   color: #314b71; /* Adds a color to the heading */
+   margin: 20px 0 0; /* Adds margin at the top */
+   flex-direction: row;
+}
