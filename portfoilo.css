@@ -201,3 +201,62 @@ nav ul li a {
 .tab-contents.active-tab{
    display: block;
 }
+/*------------------Services----------------*/
+#services{
+   padding: 50px 0;
+}
+.services-list{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+   grid-gap: 40px;
+   margin-top: 50px;
+}
+.services-list div{
+   background: #1b1b1b;
+   padding: 25px;
+   font-size: 14px;
+   font-weight: 300;
+   border-right: 10px;
+   transition:background 0.5s,tranform 0.5s;
+}
+.services-list div i{
+   font-size:38px; 
+   margin-bottom: 30px;
+}
+.services-list div h2{
+   font-size: 30px;
+   font-weight: 500;
+   margin-bottom: 15px;
+}
+.services-list div a{
+   text-decoration: none;
+   color: #314b71;
+   font-size: 14px;
+   margin-top: 20px;
+   display: inline-block;
+}
+.services-list div :hover{
+   background: #ff004f;
+   transform: translateY(-30px);
+
+}
+#portfoilo{
+   padding: 50px 0;
+}
+.work-list{
+   display:grid;
+   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+   grid-gap: 40px;
+   margin-top: 50px;
+}
+.work{
+   border-radius: 10px;
+   position: relative;
+   overflow: hidden;
+}
+.work img{
+   width: 100%;
+   border-radius: 10px;
+   display: flex;
+    
+}
