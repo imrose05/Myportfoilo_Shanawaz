@@ -1,56 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanawaz-Portfolio</title>
-    <link rel="stylesheet" href="portfoilo.css">
-    
-</head>
-<body>
-    <div>
-        <div id="logo">
-            <h1>
-               <h1><span style="color: #314b71; font-size: 75px;">S</span>hanawaz.</h1>
-        </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shanawaz-Portfolio</title>
+        <link rel="stylesheet" href="portfoilo.css">
+        
+    </head>
+    <body>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfoilo</a></li>
+                <li><a href="#">Contact</a></li>
 
-    <div id="content">
-        <h2><span style="color: #314b71;">S</span>oftware <span style="color: #314b71">E</span>ngineer</h2>
-        <h1>Hi, I'm <span style="color: #314b71;">Mohammed Abdul Shanawaz</span><br>From India</h1>
-        <p><h4>Passionate about crafting clean, efficient, and innovative solutions through code.</h4></p>
-    </div>
-</body>
-<body>
-</div>
+            </ul>
+        </nav> 
 
-    <div id="profile-pic">
-        <img src="mainpic-transformed.jpeg  " alt="Shanawaz's Picture">
-    
-    
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfoilo</a></li>
-            <li><a href="#">Contact</a></li>
 
-        </ul>
-    </nav>  
-    </div>
-</div>  
-    <<div id="About">
-        <div class="container">
-            <div class="about-col-2">
-                <h1>About Me </h1>
+        <div id="landing">
+            
+            <div id="vertical-header">
+                <div id="logo">
+                
+                    <h1><span style="color: #314b71; font-size: 75px;">S</span>hanawaz.</h1>
+                </div>
+    
+                <div id="content">
+                    <h2><span style="color: #ffffff;">Software Engineer</span></h2>
+                    <h1>Hi, I'm <span style="color: #314b71;">Mohammed Abdul Shanawaz</span><br>From India</h1>
+                    <p><h4>Passionate about crafting clean, efficient, and innovative solutions through code.</h4></p>
+                </div>
+
+            </div>
+            
+   
+         
+
+            <div id="profile-pic">
+                <img src="mainpic-transformed.jpeg  " alt="Shanawaz's Picture">
+ 
+            </div>
+        </div>  
+    
+
+        <div id="About">
+            <div class="container">
+                <div class="about-col-1">
+                    <img src="myoriginalpic.jpg" alt="Shanawaz's Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi, I'm <span style="color: #314b71;"><b>Mohammed Abdul Shanawaz</b></span>, a passionate software engineer dedicated to solving real-world problems through innovative and clean code. I enjoy learning and exploring cutting-edge technologies while contributing to impactful projects.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span style="color: #314b71"> Programming Languages</span> <br>C language</br><br>Java</br><br>Python</br></li>
+                            <li><span style="color: #314b71"> Web Development</span> <br>HTML</br><br>CSS</br><br>Javascript</br><br>SQL</br></li>
+                            <li><span style="color: #314b71">Softwares</span> <br>VN</br><br>CapCut</br><br>MongoDB</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2025-Feb 2025</span> <br>Java Programming Intern At CodSoft </br></li>
+                            <li><span>May 2024-June 2024</span> <br>Software Engineer Intern, Ordnance Factory Medak – Hyderabad </br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Aug 2022-Present</span> <br>B-tech in Computer Science And Engineering - Gitam University Hyderabad </br></li>
+                            <li><span>July 2020-July 2022</span> <br>Intermediate At Narayana Jr College– Hyderabad </br></li>
+                            <li><span>July 2015-July 2020</span> <br>Seconday Education(6-10th) At Narayana High School– Hyderabad </br></li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    
+        
+        
+        
+
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+                
+            }
+        </script>
 
 
-
-
-</body>
-</html>
+    </body>
+    </html>
