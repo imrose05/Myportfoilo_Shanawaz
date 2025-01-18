@@ -217,6 +217,7 @@ nav ul li a {
    font-size: 14px;
    font-weight: 300;
    border-right: 10px;
+   border-radius: 15px;
    transition:background 0.5s,tranform 0.5s;
 }
 .services-list div i{
@@ -240,23 +241,235 @@ nav ul li a {
    transform: translateY(-30px);
 
 }
-#portfoilo{
-   padding: 50px 0;
+.work-list {
+   font-size: 14px;
+   display: flex; /* Switch to flexbox for a row-wise layout */
+   flex-direction: row; /* Items will align in rows */
+   justify-content: center; /* Center the items horizontally */
+   flex-wrap: wrap; /* Allow wrapping to new rows if needed */
+   gap: 20px; /* Add spacing between items */
 }
-.work-list{
-   display:grid;
-   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-   grid-gap: 40px;
-   margin-top: 50px;
-}
-.work{
+
+.work {
    border-radius: 10px;
    position: relative;
    overflow: hidden;
+   text-align: center;
+   transition: transform 0.5s;
 }
-.work img{
+
+.work img {
    width: 100%;
+   height: auto;
+   display: block;
    border-radius: 10px;
+   object-fit: cover;
+}
+
+.work:hover img {
+   transform: scale(1.1);
+}
+
+.layer {
+   width: 100%;
+   height: 0;
+   background: linear-gradient(rgba(0, 0, 0, 0.6), #070001);
+   border-radius: 10px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   overflow: hidden; /* Ensures content does not overflow */
    display: flex;
-    
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 10px; /* Adds padding for better alignment */
+   text-align: center;
+   font-size: 14px;
+   color: #fff;
+   transition: height 0.5s ease;
+}
+
+.layer h3 {
+   font-weight: 500;
+   margin-bottom: 10px; /* Adjusted spacing to avoid overflow */
+   word-wrap: break-word; /* Ensures long text wraps inside the container */
+   overflow: hidden; /* Prevents text overflow */
+}
+
+.layer a {
+   margin-top: 10px;
+   color: #314b71;
+   text-decoration: none;
+   font-size: 18px;
+   line-height: 60px;
+   background: #fff;
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.work:hover .layer {
+   height: 100%; /* Fully reveal the layer on hover */
+}
+.btn{
+   display: block;
+   margin: 50px auto;
+   width: fit-content;
+   border: 1px solid #314b71;
+   padding: 14px 50px;
+   border-radius: 6px;
+   text-decoration: none;
+   color: #fff;
+   transition: background 0.5s;
+}
+.btn:hover{
+   background: #314b71;
+
+}
+/*---------------------Contact-------------------------*/
+.contact-container {
+   display: flex; /* Align items side-by-side */
+   justify-content: space-between; /* Add space between sections */
+   align-items: flex-start; /* Align items to the top */
+   gap: 20px; /* Space between the two sections */
+   margin: 0 auto;
+   max-width: 1200px; /* Ensure a consistent width */
+   padding: 20px; /* Add some padding for spacing */
+}
+
+.contact-left {
+   flex: 1; /* Allow it to take up 1 part of the available space */
+   max-width: 35%; /* Limit the width to prevent overflow */
+}
+
+.contact-right {
+   flex: 1; /* Allow it to take up 1 part of the available space */
+   max-width: 60%; /* Limit the width for balance */
+}
+
+.contact-left p {
+   margin-top: 30px;
+   line-height: 1.5;
+}
+
+.contact-left p i {
+   color: #314b71;
+   margin-right: 15px;
+   font-size: 25px;
+   vertical-align: middle;
+}
+
+.social-icons {
+   margin-top: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+.social-icons a {
+   text-decoration: none;
+   font-size: 30px;
+   color: aliceblue;
+   display: inline-block;
+   transition: transform 0.5s, color 0.5s;
+}
+
+.social-icons a:hover {
+   color: #314b71;
+   transform: translateY(-5px);
+}
+
+.btn.btn2 {
+   display: inline-block;
+   background: #314b71;
+   color: #fff;
+   padding: 14px 60px;
+   font-size: 18px;
+   border: none;
+   border-radius: 6px;
+   margin-top: 20px;
+   cursor: pointer;
+   text-align: center;
+   transition: background 0.3s, transform 0.3s;
+}
+
+.btn.btn2:hover {
+   background: #22334e;
+   transform: scale(1.05);
+}
+
+.contact-right form {
+   width: 100%;
+}
+
+form input, form textarea {
+   width: calc(100% - 30px); /* Adjust for padding/margin */
+   border: 0;
+   outline: none;
+   background: #262626;
+   padding: 15px;
+   margin: 15px 0; /* Add spacing above and below */
+   color: #fff;
+   font-size: 18px;
+   border-radius: 6px;
+}
+
+form textarea {
+   resize: none;
+   height: 120px;
+}
+
+form .btn2 {
+   padding: 14px 60px;
+   font-size: 18px;
+   margin-top: 20px;
+   cursor: pointer;
+   background: #314b71;
+   color: #fff;
+   border: none;
+   border-radius: 6px;
+   transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form .btn2:hover {
+   background: #22334e;
+   transform: scale(1.05);
+}
+.copyright{
+   width: 10% 110% ;
+   text-align: center;
+   padding: 25px 0;
+   background: #262626;
+   font-weight: 300;
+   margin-top: 20px;
+
+}
+.copyright i{
+   color: #d6d623;
+}
+/*--------------------Css for small screens----------*/
+@media only screen and (max-width:600px) {
+   #landing{
+      background-image: url(photoforphone.jpeg);
+   }
+   #content{
+      margin-top: 100%;
+      font-size: 16px;
+
+   }
+   #content h1{
+      font-size: 30px;
+   }
+   #content h2{
+      font-size:45px;
+   }
+   #content p h3{
+      font-size: 10px;
+   }
+   
 }
