@@ -6,7 +6,9 @@ body {
    background-color: #080808;
    color: #fff;
 }
-
+html{
+   scroll-behavior: smooth;
+}
 #landing{
    margin-top: 40px;
    display: flex;
@@ -54,6 +56,10 @@ nav {
    right: 10px; 
    display: flex;
    align-items: center;
+}
+nav .fa-solid{
+   display: none;
+
 }
 
 nav ul {
@@ -134,25 +140,7 @@ nav ul li a {
    line-height: 1.8;
    color: #ddd;
 }
-@media (max-width: 768px) {
-   .container {
-       flex-direction: column;
-       text-align: center;
-   }
 
-   .about-col-2 {
-       margin-left: 0;
-       margin-top: 20px;
-   }
-
-   .about-col-1 img {
-       width: 300px;
-   }
-
-   .about-col-2 h1 {
-       font-size: 36px;
-   }
-}
 .tab-titles{
    display: flex;
    margin: 20px 0 40px;
@@ -452,24 +440,191 @@ form .btn2:hover {
 .copyright i{
    color: #d6d623;
 }
-/*--------------------Css for small screens----------*/
-@media only screen and (max-width:600px) {
-   #landing{
-      background-image: url(photoforphone.jpeg);
-   }
-   #content{
-      margin-top: 100%;
-      font-size: 16px;
 
+/*--------------------Css for small screens----------*/
+@media only screen and (max-width: 768px) {
+   #landing {
+      background-image: url(photoforphone.jpeg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      height: 100vh;
+      box-sizing: border-box;
    }
-   #content h1{
-      font-size: 30px;
+
+   #content h1 {
+      font-size: 2.5rem;
    }
-   #content h2{
-      font-size:45px;
+
+   #content p {
+      font-size: 1rem;
    }
-   #content p h3{
-      font-size: 10px;
+
+   #profile-pic img {
+      max-width: 250px;
    }
+
+   nav ul {
+      background: #314b71;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 200px;
+      height: 100vh;
+      padding-top: 50px;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 2;
+   }
+
+   nav ul li a {
+      font-size: 0.9rem;
+   }
+   nav .fa-solid{
+      display: block;
+      font-size: 25px;
    
+   }
+   nav ul li{
+      display: block;
+      margin: 25px;
+   }
+   nav ul .fa-solid{
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+   }
+   .about-col-1,.about-col-2{
+      flex-basis: 100%;
+   }
+   .about-col-1{
+      margin-bottom: 30px;
+   }
+   .about-col-2{
+      font-size: 14px;
+   }
+   #services {
+      padding: 20px;
+      text-align: center;
+  }
+
+  #services h1 {
+      font-size: 36px; /* Adjusted font size for smaller screens */
+      margin-bottom: 20px;
+  }
+
+  .services-list {
+      display: flex;
+      flex-direction: column; /* Stack services vertically */
+      gap: 20px; /* Add spacing between each service */
+      align-items: center;
+  }
+
+  .services-list div {
+      background: #1e1e1e; /* Card background color */
+      color: #ffffff; /* Text color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+      width: 90%; /* Adjust width to fit the screen */
+      max-width: 400px; /* Limit max width for better design */
+      text-align: center;
+      margin-left: 70%;
+  }
+
+  .services-list i {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #0078d7; /* Icon color */
+  }
+
+  .services-list h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+  }
+
+  .services-list p {
+      font-size: 16px;
+      line-height: 1.5;
+  }
+
+  .services-list a {
+      color: #0078d7; /* Link color */
+      text-decoration: none;
+  }
+
+  .services-list a:hover {
+      text-decoration: underline;
+  }
+  #portfolio h2 {
+         font-size: 36px;
+   }
+
+   .work-list {
+      display: block;
+      text-align: center;
+   }
+
+   .work {
+     
+      width: 180%;
+      margin: 20px auto;
+   
+      }
+
+   .btn {
+   
+      font-size: 28px;
+     
+   }
+   .contact-left,
+        .contact-right {
+            flex-basis: 100%;
+            width: 100%; /* Full width for both sections */
+            margin-bottom: 20px;
+        }
+
+        .contact-left h1 {
+            font-size: 36px;
+        }
+
+        .contact-left p {
+            font-size: 16px;
+        }
+
+        .social-icons {
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn {
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .contact-right form input,
+        .contact-right form textarea {
+            font-size: 14px;
+        }
+
+        .contact-right form button {
+            font-size: 16px;
+        }
+        .copyright{
+         flex-basis: 100%;
+         font-size: 18px;
+        }
 }
+#msg{
+   color: #ff004f;
+   margin-top: -40px;
+   display: block;
+}
+  
+
