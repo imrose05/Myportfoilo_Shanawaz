@@ -1,0 +1,229 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shanawaz-Portfolio</title>
+        <link rel="stylesheet" href="portfoilo.css">
+        <script src="https://kit.fontawesome.com/f6c1e77f04.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+        <nav >
+            <ul id="sidemenu">
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfoilo</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav> 
+
+
+        <div id="landing">
+            
+            <div id="vertical-header">
+                <div id="logo">
+                
+                    <h1><span style="color: #314b71; font-size: 75px;">S</span>hanawaz.</h1>
+                </div>
+    
+                <div id="content">
+                    <h2><span style="color: #ffffff;">Software Engineer</span></h2>
+                    <h1>Hi, I'm <span style="color: #314b71;">Mohammed Abdul Shanawaz</span><br>From Hyderabad,India</h1>
+                    <p><h3>Passionate about crafting clean, efficient, and innovative solutions through code.</h3></p>
+                </div>
+
+            </div>
+            
+   
+         
+
+            <div id="profile-pic">
+                <img src="mainpic-transformed.jpeg  " alt="Shanawaz's Picture">
+ 
+            </div>
+        </div>  
+    
+<!----------------------------About---------------------------------->
+        <div id="About">
+            <div class="container">
+                <div class="about-col-1">
+                    <img src="myoriginalpic.jpg" alt="Shanawaz's Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi, I'm <span style="color: #314b71;"><b>Mohammed Abdul Shanawaz</b></span>, a passionate software engineer dedicated to solving real-world problems through innovative and clean code. I enjoy learning and exploring cutting-edge technologies while contributing to impactful projects.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span style="color: #314b71"> Programming Languages</span> <br>C language,Java,Python</br></li>
+                            <li><span style="color: #314b71"> Web Development</span> <br>HTML,CSS,Javacript,SQL</br></li>
+                            <li><span style="color: #314b71">Softwares</span> <br>VN,CapCut,Adobe Photoshop,MongoDB</br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2025-Feb 2025</span> <br>Java Programming Intern At CodSoft </br></li>
+                            <li><span>May 2024-June 2024</span> <br>Software Engineer Intern, Ordnance Factory Medak – Hyderabad </br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Aug 2022-Present</span> <br>B-tech in Computer Science And Engineering - Gitam University Hyderabad </br></li>
+                            <li><span>July 2020-July 2022</span> <br>Intermediate At Narayana Jr College– Hyderabad </br></li>
+                            <li><span>July 2015-July 2020</span> <br>Seconday Education(6-10th) At Narayana High School– Hyderabad </br></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------Services------------------------->
+        <div id="services">
+            <div class="container">
+                <h1 style="font-size: 56px;">My Services </h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-keyboard"></i>
+                        <h2>Web Development</h2>
+                        <p>Offering responsive, user-friendly, and innovative web development services to enhance your online presence and performance</p>
+                        <p>For More info Please Do visit <a href="https://github.com/imrose05"><br>Git-Hub Profile</br></a></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Java Developer</h2>
+                        <p>Providing efficient, scalable, and robust Java programming services for software development, automation, and application performance enhancement.</p>
+                        <p>For More info Please Do visit <a href="https://github.com/imrose05"><br>Git-Hub Profile</br></a></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-camera"></i>
+                        <h2>Cinematography and Editing</h2>
+                        <p>Providing professional cinematography and editing services to create stunning and engaging visual content on social media platforms.</p>
+                        <p>For More info Please Do visit <a href="https://www.instagram.com/_imrose_05?igsh=ZW5mdjBoaHdudzBt    "><br>Instagram Profile</br></a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!------------------------------------Portfolio------------------------------------------------------------->
+        <section id="portfolio">
+            <h2 style="font-size: 56px;">My Work</h2>
+            <div class="work-list">
+               <div class="work">
+                  <img src="work1.jpeg" alt="Work 1">
+                  <div class="layer">
+                    <h3>Recordo Apk</h3>
+                    <p>Developed an app to maintain records like transactions, GST bill payments, vehicle and driver details, etc.
+                        <br>The main aim was to organize records for the family business.</br>
+                        <br><b>Tools Used:</b> HTML, CSS, JavaScript</br></p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+               </div>
+               
+            </div>
+            <a href="#" class="btn">See More</a>
+         </section>
+<!--------------------------------------------Contact --------------------->
+        <div id="Contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 style="font-size: 56px;">Approach Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>mshanawaz1324@gmail.com</p>
+                        <p> <i class="fa-solid fa-phone"></i>+91 8008252586</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/mohammed-abdul-shanawaz-84aaa3255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/imrose05"><i class="fa-brands fa-square-github"></i></a>
+                            <a href="https://www.instagram.com/_imrose_05?igsh=ZW5mdjBoaHdudzBt"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/_imrose_05?t=XJfMTAQh2fesV33o_VRzHQ&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-medium"></i></a>
+                        </div>
+                        <a href="maininternresume.pdf" download class="btn btn2">Download My CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Full Name" required>
+                            <input type="email" name="Email" placeholder="Your Email " required>
+                            <input type="number" name="Phone number" placeholder="Phone number" required>
+                            <textarea name="Message" rows="6" placeholder="About You"></textarea>
+                    
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mohammed Abdul Shanawaz<i class="fa-solid fa-feather"></i>. All Rights Reserved.</p>
+            </div>
+        </div>
+         
+        
+        
+        
+
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+                
+            }
+        </script>
+        <script>
+            var sideme=document.getElementById("sidemenu");
+            function openmenu(){
+                sideme.style.right="0";
+
+            }
+            function closemenu(){
+                sideme.style.right="-200px";
+                
+            }
+        </script>
+
+        <!----------Script Url--------------------->
+        
+          
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxi425J6YUcze0weeaLJYmshbPDAQoSctGrbRlPM4SOzb1xKLBV0GDePn-tFTDNwuw/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg =document.getElementById("msg")
+ 
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response =>{
+                    msg.innerHTML="Message Sent Successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=" "
+
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+
+    </body>
+    </html>
