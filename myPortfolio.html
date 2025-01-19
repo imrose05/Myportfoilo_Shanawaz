@@ -10,15 +10,16 @@
     </head>
     <body>
         
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfoilo</a></li>
-                <li><a href="#">Contact</a></li>
-
+        <nav >
+            <ul id="sidemenu">
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfoilo</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav> 
 
 
@@ -150,19 +151,20 @@
                         <a href="maininternresume.pdf" download class="btn btn2">Download My CV</a>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Full Name" required>
-                            <input type="email" name="email" placeholder="Your Email " required>
-                            <input type="number" name="phone number" placeholder="Phone number" required>
+                            <input type="email" name="Email" placeholder="Your Email " required>
+                            <input type="number" name="Phone number" placeholder="Phone number" required>
                             <textarea name="Message" rows="6" placeholder="About You"></textarea>
                     
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Mohammed Abdul Shanawaz<i class="fa-solid fa-feather"></i>. All Rights Reserved.</p>
+                <p>&copy; 2025 Mohammed Abdul Shanawaz<i class="fa-solid fa-feather"></i>. All Rights Reserved.</p>
             </div>
         </div>
          
@@ -186,6 +188,41 @@
                 
             }
         </script>
+        <script>
+            var sideme=document.getElementById("sidemenu");
+            function openmenu(){
+                sideme.style.right="0";
+
+            }
+            function closemenu(){
+                sideme.style.right="-200px";
+                
+            }
+        </script>
+
+        <!----------Script Url--------------------->
+        
+          
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxi425J6YUcze0weeaLJYmshbPDAQoSctGrbRlPM4SOzb1xKLBV0GDePn-tFTDNwuw/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg =document.getElementById("msg")
+ 
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response =>{
+                    msg.innerHTML="Message Sent Successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=" "
+
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 
 
     </body>
