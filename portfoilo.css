@@ -10,18 +10,24 @@ html{
    scroll-behavior: smooth;
 }
 #landing{
-   margin-top: 40px;
+   
+   margin-top: 20px;/*changed*/
    display: flex;
-   flex-direction: row;
+   flex-direction: row;/*changed*/
    align-items: center;
+   text-align: center;/*changed*/
    justify-content: space-between;
    height: 100vh;
 
 }
+#vertical-header {
+   margin-bottom: 20px;
+ }
 #logo {
    font-size: 2rem;
    font-weight: bold;
    color: #fff;
+   
 }
 
 
@@ -96,7 +102,7 @@ nav ul li a {
 
 #profile-pic img {
    width: 100%;
-   max-width: 450px;
+   max-width: 300px;
    border-radius: 10px;
    object-fit: cover;
 }
@@ -107,6 +113,7 @@ nav ul li a {
    padding: 50px 10%;
    min-height: 100vh; /* Full screen height */
    display: flex;
+   flex-direction: column;
    align-items: center;
 }
 
@@ -304,7 +311,7 @@ nav ul li a {
 .work:hover .layer {
    height: 100%; /* Fully reveal the layer on hover */
 }
-.btn{
+.button{
    display: block;
    margin: 50px auto;
    width: fit-content;
@@ -315,7 +322,7 @@ nav ul li a {
    color: #fff;
    transition: background 0.5s;
 }
-.btn:hover{
+.button:hover{
    background: #314b71;
 
 }
@@ -379,6 +386,7 @@ nav ul li a {
    padding: 14px 60px;
    font-size: 18px;
    border: none;
+   margin-top: 10px;
    border-radius: 6px;
    margin-top: 20px;
    cursor: pointer;
@@ -444,16 +452,16 @@ form .btn2:hover {
 /*--------------------Css for small screens----------*/
 @media only screen and (max-width: 768px) {
    #landing {
-      background-image: url(photoforphone.jpeg);
-      background-size: cover;
+     
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      text-align: left;
       padding: 20px;
-      height: 100vh;
+     
       box-sizing: border-box;
    }
 
@@ -462,24 +470,40 @@ form .btn2:hover {
    }
 
    #content p {
-      font-size: 1rem;
+      font-size: 0.5rem;
    }
-
+   #profile-pic {
+      flex:-2;
+      height: 100%;
+      margin-right: 60px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+   }
    #profile-pic img {
-      max-width: 250px;
+      flex:20;
+      height: 50%;
+      margin-right: -130px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      width: 66%;
+         max-width: 748px;
+         border-radius: 10px;
+         object-fit: cover;
+      
    }
 
    nav ul {
       background: #314b71;
-      position: fixed;
+      position: absolute;
       top: 0;
       right: -300px;
-      width: 200px;
+      width: 100px;
       height: 100vh;
       padding-top: 50px;
       flex-direction: column;
       gap: 10px;
-      z-index: 2;
    }
 
    nav ul li a {
@@ -500,18 +524,54 @@ form .btn2:hover {
       left: 25px;
       cursor: pointer;
    }
+   #About{
+
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+     
+   
+      height: 100vh;
+      box-sizing: border-box; 
+   }
    .about-col-1,.about-col-2{
       flex-basis: 100%;
    }
-   .about-col-1{
-      margin-bottom: 30px;
+   .about-col-1 img {
+     
+      flex:2;
+      height: 0%;
+      text-align: center;
+      margin-right: 100px;
+      display: flex;
+      left: 30%;
+     
+      justify-content: center;
+      align-items: center;
+      width: 0%;
+         max-width: 748px;
+         border-radius: 10px;
+         object-fit: cover;
+      
    }
    .about-col-2{
       font-size: 14px;
    }
+  .container .about-col-1{
+      display: flex;
+      
+      justify-content: left;
+      width: 100%;
+      align-items:start;
+   }
    #services {
       padding: 20px;
       text-align: center;
+      margin-right: 13%;
   }
 
   #services h1 {
@@ -523,7 +583,10 @@ form .btn2:hover {
       display: flex;
       flex-direction: column; /* Stack services vertically */
       gap: 20px; /* Add spacing between each service */
-      align-items: center;
+      align-items: center
+    
+      
+      
   }
 
   .services-list div {
@@ -562,6 +625,7 @@ form .btn2:hover {
   .services-list a:hover {
       text-decoration: underline;
   }
+
   #portfolio h2 {
          font-size: 36px;
    }
@@ -573,30 +637,49 @@ form .btn2:hover {
 
    .work {
      
-      width: 180%;
+      width: 100%;
       margin: 20px auto;
    
       }
 
    .btn {
-   
-      font-size: 28px;
+      display: block;
+      margin: 50px auto;
+      width: 20px;
+      border: 1px solid #314b71;
+      padding: 8px 8px;
+      align-items: center;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.5s;
      
+   }
+   .contact-left p i{
+      color: #314b71;
+      margin-right: 15px;
+      font-size: 25px;
+      vertical-align: middle;
    }
    .contact-left,
         .contact-right {
             flex-basis: 100%;
             width: 100%; /* Full width for both sections */
             margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
         }
 
         .contact-left h1 {
             font-size: 36px;
         }
 
+        
         .contact-left p {
-            font-size: 16px;
-        }
+         margin-top: 30px;
+         line-height: 1.5;
+         font-size: 16px;
+      }
 
         .social-icons {
             justify-content: center;
