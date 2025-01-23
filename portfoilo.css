@@ -197,45 +197,43 @@ nav ul li a {
    display: block;
 }
 /*------------------Services----------------*/
-#services{
+#services {
    padding: 50px 0;
 }
-.services-list{
-   display:grid;
-   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+.services-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
    grid-gap: 40px;
    margin-top: 50px;
 }
-.services-list div{
+
+.services-list div {
    background: #1b1b1b;
    padding: 25px;
-   font-size: 14px;
-   font-weight: 300;
-   border-right: 10px;
    border-radius: 15px;
-   transition:background 0.5s,tranform 0.5s;
+   text-align: center;
+   transition: transform 0.5s, background 0.5s;
 }
-.services-list div i{
-   font-size:38px; 
-   margin-bottom: 30px;
+
+.services-list div:hover {
+   background: #ff004f;
+   transform: translateY(-10px);
 }
-.services-list div h2{
+
+.services-list div h2 {
    font-size: 30px;
-   font-weight: 500;
    margin-bottom: 15px;
 }
-.services-list div a{
-   text-decoration: none;
+
+.services-list div a {
    color: #314b71;
+   text-decoration: none;
    font-size: 14px;
    margin-top: 20px;
    display: inline-block;
 }
-.services-list div :hover{
-   background: #ff004f;
-   transform: translateY(-30px);
 
-}
 .work-list {
    font-size: 14px;
    display: flex; /* Switch to flexbox for a row-wise layout */
@@ -470,7 +468,7 @@ form .btn2:hover {
    }
 
    #content p {
-      font-size: 0.5rem;
+      font-size: 0.2rem;
    }
    #profile-pic {
       flex:-2;
@@ -483,90 +481,71 @@ form .btn2:hover {
    #profile-pic img {
       flex:20;
       height: 50%;
-      margin-right: -130px;
+      margin-right: -250px;
       display: flex;
       justify-content: right;
       align-items: center;
-      width: 66%;
-         max-width: 748px;
+      width: 60%;
+         max-width: 300px;
          border-radius: 10px;
          object-fit: cover;
       
    }
-
    nav ul {
-      background: #314b71;
-      position: absolute;
-      top: 0;
-      right: -300px;
-      width: 100px;
-      height: 100vh;
-      padding-top: 50px;
-      flex-direction: column;
-      gap: 10px;
+      display: flex;
+      list-style: none;
+      gap: 25px;
    }
-
-   nav ul li a {
-      font-size: 0.9rem;
-   }
-   nav .fa-solid{
-      display: block;
-      font-size: 25px;
    
+   nav ul li {
+      margin: 40px 0px;
    }
-   nav ul li{
-      display: block;
-      margin: 25px;
+   
+   nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
    }
-   nav ul .fa-solid{
-      position: absolute;
-      top: 25px;
-      left: 25px;
-      cursor: pointer;
-   }
-   #About{
-
+   
+    #About {
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      flex-direction: column; /* Stack the columns vertically */
+      align-items:  center; /* Center content horizontally */
       justify-content: center;
-
-     
-   
-      height: 100vh;
+      height: auto; /* Allow content to adjust height dynamically */
+      padding: 10px; /* Add some padding for spacing */
       box-sizing: border-box; 
    }
-   .about-col-1,.about-col-2{
-      flex-basis: 100%;
+
+   .about-col-1,
+   .about-col-2 {
+      flex-basis: 100%; /* Make each column take full width */
+      width: 100%; /* Ensure full width on small screens */
+      margin-bottom: 20px; /* Add spacing between columns */
    }
+
    .about-col-1 img {
-     
-      flex:2;
-      height: 0%;
-      text-align: center;
-      margin-right: 100px;
-      display: flex;
-      left: 30%;
-     
-      justify-content: center;
-      align-items: center;
-      width: 0%;
-         max-width: 748px;
-         border-radius: 10px;
-         object-fit: cover;
-      
+      width: 90%; /* Scale image width to fit smaller screens */
+      height: auto; /* Maintain aspect ratio */
+      margin: 0 auto; /* Center image horizontally */
+      border-radius: 10px;
+      object-fit: cover; /* Maintain image proportions */
    }
-   .about-col-2{
-      font-size: 14px;
+
+   .about-col-2 {
+      text-align: center; /* Center text content */
+      font-size: 16px; /* Adjust font size for readability */
+      line-height: 1.6; /* Improve text readability */
+      width: 90%; /* Center text content */
    }
-  .container .about-col-1{
+
+   .container .about-col-1 {
       display: flex;
-      
-      justify-content: left;
+      justify-content: center; /* Center image on smaller screens */
+      align-items: center; /* Center image vertically */
       width: 100%;
-      align-items:start;
    }
    #services {
       padding: 20px;
